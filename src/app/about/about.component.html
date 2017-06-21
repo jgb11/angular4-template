@@ -1,0 +1,10 @@
+<button (click)="byEmail=true;">by Email</button>
+<button (click)="byEmail=false;">by Social</button>
+
+<div *ngIf="byEmail; then emailTemplate; else socialTemplate"></div>
+<ng-template #emailTemplate>
+  Contact by email
+</ng-template>
+<ng-template #socialTemplate>
+  <a href="https://www.twitter.com/_jgb_" target="_blank">@_jgb_</a>
+</ng-template>
